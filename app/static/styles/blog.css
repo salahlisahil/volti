@@ -1,0 +1,126 @@
+.card {
+    height: 400px;
+    width: 380px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #999;
+    /* border-top-left-radius: var(--radius-50); */
+  border-bottom-right-radius: var(--radius-50) !important;
+  }
+  
+  .top {
+    height: 42%;
+    width: 100%;
+  }
+  .card__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 150px;
+
+    
+  }
+
+  .card__container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* height: 100vh; */
+  }
+  .category {
+    background-color: orange;
+    width: 100px;
+    height: 30px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  h2 {
+    padding: 22px 22px 0;
+  }
+  
+  p {
+    font-size: 18px;
+    padding: 0 22px;
+    line-height: 24px;
+  }
+  
+  .intro {
+    width: 85%;
+  }
+  
+ 
+  
+  a:hover {
+    color: orange;
+    transition: .3s;
+  }
+  
+  .author {
+   display: flex;
+   align-items: center;
+  }
+  
+  .profile {
+    background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    background-position: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin: 10px 0 10px 22px;
+  }
+  
+  .name {
+    padding-left: 10px;
+    cursor: pointer;
+    font-weight: 300;
+  }
+  
+  .name a {
+    font-weight: 400;
+    color: orange;
+  }
+  
+  .info {
+    display: flex;
+    color: #999;
+    font-size: 14px;
+    margin-top: 8px;
+    padding-left: 0;
+  }
+  
+  .info a { cursor: pointer; }
+  
+  ion-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    padding: 10px 8px 0 22px;
+  }
+
+
+
+  @media screen and (max-width: 700px) {
+
+    .mediab {
+      margin-bottom: 400px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 350px) {
+    .mediab{
+        margin-bottom: 500px;
+    }
+   
+  }
+  

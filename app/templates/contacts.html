@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Volti - Book Your Eco-Friendly Ride</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="{% static 'styles/font.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/service.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/contact.css' %}"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% if messages %}
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                {% for message in messages %}
+                    Swal.fire({
+                        icon: '{{ message.tags }}',
+                        title: '{{ message }}',
+                        showConfirmButton: true,
+                    });
+                {% endfor %}
+            });
+        </script>
+    {% endif %}
+</head>
+
+<body>
+<!--
+- #PRELOADER
+-->
+
+{% include 'template/preloader.html' %}
+
+<!--
+- #HEADER
+-->
+
+{% include 'template/header.html' %}
+<main>
+    <div style="margin-top: 150px; display: flex; justify-content: center; align-items: center; flex-direction: column;"
+         class="contact-content-static" data-reveal="right">
+        <p class="section-subtitle has-before" id="service-label" data-reveal>What We Do!</p>
+
+        <h2 class="h2 section-title" data-reveal>Contact Us</h2>
+    </div>
+
+    <section class="section">
+        <div class="container containerr">
+            <div class="map w-full h-[780px] mt-[124px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19875.91072207588!2d-0.3284739969374072!3d51.4858962957116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760d9557e7c74f%3A0xdcae9665ecdec357!2zQnJlbnRmb3JkLCBCaXJsyZnFn21pxZ8gS3JhbGzEsXE!5e0!3m2!1saz!2saz!4v1703155382032!5m2!1saz!2saz"
+                        width="500px" height="300px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacts">
+                <div class="form-container">
+                    <form class="form" method="post" action="{% url 'contactus' %}">
+                        {% csrf_token %}
+                        <div class="username">
+                            <input type="text" name="name" placeholder="Enter your Name">
+                        </div>
+                        <div class="useremail">
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="usermessage">
+                            <textarea name="message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn_q">
+                            <span class="span">Contact Us</span>
+                            <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+- #CONTACT
+-->
+
+    {% include 'template/contact.html' %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</main>
+
+
+<!--
+- #FOOTER
+-->
+
+{% include 'template/footer.html' %}
+<!--
+- #BACK TO TOP
+-->
+
+{% include 'template/top_btn.html' %}
+
+
+    <!--
+      - ionicon link
+    -->
+<script src="{% static 'scripts/main.js' %}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

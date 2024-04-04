@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Volti - Book Your Eco-Friendly Ride</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="{% static 'styles/font.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/service.css' %}"/>
+    <link rel="stylesheet" href="{% static 'styles/project.css' %}"/>
+</head>
+
+<body>
+<!--
+- #PRELOADER
+-->
+
+{% include 'template/preloader.html' %}
+
+<!--
+- #HEADER
+-->
+
+{% include 'template/header.html' %}
+
+<main>
+    <div class="about-content-static" data-reveal="right">
+        <p class="section-subtitle has-before" id="service-label" data-reveal>What We Do!</p>
+
+        <h2 class="h2 section-title" data-reveal>
+            Our Project
+        </h2>
+    </div>
+
+    <section class="project__container" style="margin-top: 19rem;">
+        <div class="container medial">
+            <div class="card"
+                 style="background:linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/electric-vehicle.jpg' %}) no-repeat center/cover;">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Project</h3>
+                    <h3>Electric Car</h3>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="card"
+                 style="background:linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/cta-banner.jpg' %}) no-repeat center/cover;">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Project</h3>
+                    <h3>Electric Motosycle</h3>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="card"
+                 style="background: linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/elek.jpg' %}) no-repeat center/cover;">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Project</h3>
+                    <h3>Electric Bicycle</h3>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+
+    <!--
+    - #CONTACT
+  -->
+
+    {% include 'template/contact.html' %}
+
+</main>
+
+
+<!--
+- #FOOTER
+-->
+
+{% include 'template/footer.html' %}
+
+<!--
+- #BACK TO TOP
+-->
+
+{% include 'template/top_btn.html' %}
+
+<script src="{% static 'scripts/main.js' %}"></script>
+
+<!--
+- ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

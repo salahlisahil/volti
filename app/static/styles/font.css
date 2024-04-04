@@ -1,0 +1,66 @@
+/*-----------------------------------*\
+  #font.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+/**
+ * #QUICKSAND
+ */
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local("Quicksand SemiBold"),
+        url("../font/quicksand/quicksand-semiBold.woff2");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Quicksand Bold"),
+        url("../font/quicksand/quicksand-bold.woff2");
+}
+
+
+
+/**
+ * #NUNITO-SANS
+ */
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Nunito Sans Regular"),
+        url("../font/nunito-sans/nunito-sans-regular.woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: local("Nunito Sans SemiBold"),
+        url("../font/nunito-sans/nunito-sans-semiBold.woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("Nunito Sans Bold"),
+        url("../font/nunito-sans/nunito-sans-bold.woff2");
+}

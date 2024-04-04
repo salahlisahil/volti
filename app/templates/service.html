@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volti - Book Your Eco-Friendly Ride</title>
+  <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon" />
+
+  <link rel="stylesheet" href="{% static 'styles/font.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/service.css' %}" />
+</head>
+
+<body>
+  <!-- 
+    - #PRELOADER
+  -->
+
+  {% include 'template/preloader.html' %}
+
+  <!-- 
+    - #HEADER
+  -->
+
+  {% include 'template/header.html' %}
+
+  <main>
+    <div class="about-content-static" data-reveal="right">
+      <p class="section-subtitle has-before" id="service-label" data-reveal>What We Do!</p>
+
+      <h2 class="h2 section-title" data-reveal>
+        Service
+      </h2>
+    </div>
+
+    <section class="card__container">
+      <div class="card__bx"
+        style="--clr: hsl(86, 54%, 51%);  background: linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/blog-1.jpg' %});">
+        <div class="card__data">
+          <div class="card__icon"
+            style="background-image: url('{% static 'images/blog-1.jpg' %}'); background-position: center; background-size: cover;">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <div class="card__content">
+            <h3>Authorized Service Centers</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="card__bx"
+        style="--clr:hsl(86, 54%, 51%); background: linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/blog-2.jpg' %});">
+        <div class="card__data">
+          <div class="card__icon"
+            style="background-image: url('{% static 'images/blog-2.jpg' %}'); background-position: center; background-size: cover;">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="card__content">
+            <h3>Appointment Booking</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="card__bx"
+        style="--clr: hsl(86, 54%, 51%); background: linear-gradient(to bottom right, rgb(64 29 76 / 0%), rgb(41 30 30 / 70%)), url({% static 'images/blog-3.jpg' %});;">
+        <div class="card__data">
+          <div class="card__icon"
+            style="background-image: url('{% static 'images/blog-3.jpg' %}'); background-position: center; background-size: cover;">
+            <i class="fa-brands fa-searchengin"></i>
+          </div>
+          <div class="card__content">
+            <h3>Technical Support</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 
+        - #CONTACT
+      -->
+
+    {% include 'template/contact.html' %}
+
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  {% include 'template/footer.html' %}
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  {% include 'template/top_btn.html' %}
+
+  <script src="{% static 'scripts/main.js' %}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

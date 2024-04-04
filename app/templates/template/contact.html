@@ -1,0 +1,53 @@
+{% load static %}
+
+<section class="contact" aria-label="contact" data-reveal="right">
+        <div class="container">
+
+          <ul class="contact-list">
+
+            <li>
+              <div class="contact-card">
+                <div class="card-icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h6">Hot Line</h3>
+
+                  <a href="tel:+01123457890" class="card-subtitle">{{ contact_information.hot_line }}</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-card">
+                <div class="card-icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h6">E-mail Address</h3>
+
+                  <a href="mailto:voltiinfo@gmail.com" class="card-subtitle">{{ contact_information.email_address }}</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="contact-card">
+                <div class="card-icon">
+                  <ion-icon name="compass-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h6">Our Location</h3>
+
+                  <address class="card-subtitle">{{ contact_information.location}}</address>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>

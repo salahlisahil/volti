@@ -1,0 +1,104 @@
+.social li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    font-size: 18px;
+    color: var(--light-blue);
+    background-color: white;
+    border: 1px solid var(--yellow-green);
+    width: 40px;
+    height: 40px;
+    transition: .3s;
+    color: var(--smoky-black);
+
+}
+
+.social-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li a:hover{
+    color: var(--white);
+    transition: .1s ease-in;
+    background-color: var(--yellow-green);
+}
+
+/* our team */
+.wrapper{
+    margin-top: 50px;
+  }
+  
+  .wrapper h1{    
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .team{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .team .team_member{
+    /* background: #734d4d; */
+    /* background-color:#e8e3e3; */
+    margin: 5px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid var(--yellow-green);
+    border-top-right-radius: var(--radius-30);
+    border-bottom-left-radius: var(--radius-30);
+    /* border-radius: var(--radius-15); */
+  
+  }
+  
+  .team .team_member h3{
+    color: var(--smoky-black);
+    font-size: 26px;
+    margin-top: 70px;
+  }
+  
+  .team .team_member p.role{
+    color: #ccc;
+    margin: 12px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  .team .team_member .team_img{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background:var(--yellow-green) ;
+    
+  }
+  
+  .team .team_member .team_img img{
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    object-fit: cover;
+    border-radius: 50%;
+  
+  }

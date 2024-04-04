@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Volti - Book Your Eco-Friendly Ride</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.svg' %}" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="{% static  'styles/font.css' %}"/>
+    <link rel="stylesheet" href="{% static  'styles/style.css' %}"/>
+    <link rel="stylesheet" href="{% static  'styles/service.css' %}"/>
+    <link rel="stylesheet" href="{% static  'styles/news.css' %}"/>
+</head>
+
+<body>
+<!--
+  - #PRELOADER
+-->
+
+{% include 'template/preloader.html' %}
+
+<!--
+  - #HEADER
+-->
+
+{% include 'template/header.html' %}
+<main>
+    <div class="about-content-static" data-reveal="right">
+        <p class="section-subtitle has-before" id="service-label" data-reveal>What We Do!</p>
+
+        <h2 class="h2 section-title" data-reveal>More Blog</h2>
+    </div>
+
+    <section class="section blog" aria-labelledby="blog-label">
+        <div class="container" style="margin-top: 100px;">
+            <ul class="blog-list" data-reveal>
+                {% for post in blog_posts %}
+                    <li>
+                        <div class="blog-card">
+                            <figure class="card-banner img-holder" style="--width: 770; --height: 550;">
+                                {% if forloop.counter|divisibleby:"3" %}
+                                    <img src="{% static 'images/blog-1.jpg' %}" width="770" height="550"
+                                         loading="lazy" alt="{{ post.title }}" class="img-cover">
+                                {% elif forloop.counter|add:"-1"|divisibleby:"3" %}
+                                    <img src="{% static 'images/blog-2.jpg' %}" width="770" height="550"
+                                         loading="lazy" alt="{{ post.title }}" class="img-cover">
+                                {% else %}
+                                    <img src="{% static 'images/blog-3.jpg' %}" width="770" height="550"
+                                         loading="lazy" alt="{{ post.title }}" class="img-cover">
+                                {% endif %}
+                            </figure>
+                            <div class="card-content">
+                                <ul class="card-meta-list">
+                                    <li class="card-meta-item">
+                                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                                        <span class="span">Admin</span>
+                                    </li>
+                                    <li class="card-meta-item">
+                                        <ion-icon name="chatbubble-outline" aria-hidden="true"></ion-icon>
+                                        <span class="span">2 Comments</span>
+                                    </li>
+                                </ul>
+                                <time class="publish-date"
+                                      datetime="{{ post.date_posted }}">{{ post.date_posted }}</time>
+                                <h3 class="h5">
+                                    <a href="{% url 'newsDsc' %}" class="card-title">{{ post.title }}</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+
+    <!--
+      - #CONTACT
+    -->
+
+    {% include 'template/contact.html' %}
+
+</main>
+
+
+<!--
+  - #FOOTER
+-->
+
+{% include 'template/footer.html' %}
+
+<!--
+  - #BACK TO TOP
+-->
+
+{% include 'template/top_btn.html' %}
+
+
+<!--
+  - ionicon link
+-->
+<script src="{% static 'scripts/main.js' %}"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
