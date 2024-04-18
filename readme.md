@@ -6,7 +6,7 @@
 
 <br>
 
-  <a href=""><strong> 📺 Live</strong></a> 
+  <a href="https://volti-seven.vercel.app/"><strong> 📺 Live</strong></a> 
 
 </div>
 
